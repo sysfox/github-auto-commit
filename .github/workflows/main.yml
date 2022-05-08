@@ -1,4 +1,17 @@
-      - name: 6. 推送到vercel分支
+ name: auto-commit
+ on:
+  schedule:
+  - cron: "0 2 * * 1-5"
+  workflow_dispatch:
+ jobs:
+   Task:
+     name: Null
+     runs-on: ubuntu-latest
+     steps:
+      - name: add sth to a.txt
+        run: |
+          echo 
+      - name:  commit to Github
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
