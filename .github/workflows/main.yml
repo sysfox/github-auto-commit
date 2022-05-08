@@ -4,13 +4,13 @@
   - cron: "0 2 * * 1-5"
   workflow_dispatch:
  jobs:
-   Task:
-     name: Null
+   task:
+     name: task
      runs-on: ubuntu-latest
      steps:
       - name: add sth to a.txt
         run: |
-          echo 
+          echo 'a' >> a.txt
       - name:  commit to Github
         uses: peaceiris/actions-gh-pages@v3
         with:
