@@ -1,5 +1,5 @@
 name: auto-commit
- on:
+  on:
   push:
     branches:
     - main
